@@ -1,5 +1,4 @@
-<!--====== Footer Area Start ======-->
-      <footer class="footer-area footer-fixed">
+<footer class="footer-area footer-fixed">
         <!-- Footer Top -->
         <div class="footer-top ptb_100">
           <div class="container">
@@ -300,8 +299,7 @@
                   <!-- Copyright Left -->
                   <div class="copyright-left">
                     <font data-translatekey="cpy"
-                      >All rights reserved@jadoo.co</font
-                    >
+                      >All rights reserved@jadoo.co</font>
                   </div>
                   <!-- Copyright Right -->
                 </div>

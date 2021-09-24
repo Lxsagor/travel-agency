@@ -10,7 +10,7 @@
       name="keywords"
       content="online disease detection system, plant disease detection, disease detection by machine learning, machine learning software bangladesh, crops disease detection  disease detection in fruits, disease detection system bangladesh,.auto medicine suggestions"
     />
-    <meta name="author" content="Medina Tech" />
+    <meta name="author" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>travel Agency</title>
 

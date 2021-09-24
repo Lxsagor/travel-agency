@@ -9,6 +9,12 @@
         <!-- Section Heading -->
         <div class="section-heading text-center">
           <h2>Users List</h2>
+          @if(Session::has('success'))
+                        <div class="alert alert-success">{{Session::get('success')}}</div>
+                        @endif
+                        @if(Session::has('fail'))
+                        <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                        @endif
         </div>
       </div>
     </div>
@@ -34,7 +40,7 @@
                     <td>{{$item->name}}</td>
                     <td>{{$item->email}}</td>
                     <td>
-                      <a class="btn btn-primary" href="/edit/{{$item->id}}"><i class="fas fa-edit"></i></a>
+                      <a class="btn btn-primary" href="edit/{{$item->id}}"><i class="fas fa-edit"></i></a>
                       <a class="btn btn-danger" href="/delete/{{$item->id}}"><i class="fas fa-trash"></i></a>
                     </td>
                   </tr>
@@ -72,7 +78,7 @@
                         
                       </tr>
                     </thead>
-                    @foreach ($users as $item)
+                   // @foreach ($users as $item)
                     <tbody>
                       <tr>
                         <th scope="row">{{$item->id}}</th>

@@ -1,11 +1,11 @@
 @extends('welcome')
-@section("content")
+@section('content')
 <!-- <div class="container custom-login">
     <div class="row">
                 <div class="col-sm-6">
                     <form action="login" method="POST">
                         <div class="form-group">
-                            @csrf
+                           
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                         </div>
@@ -34,7 +34,13 @@
                 <!-- Contact Box -->
                 <div class="contact-box bg-white text-center rounded p-4 p-sm-5 mt-5 mt-lg-0 shadow-lg">
                     <!-- Contact Form -->
-                    <form id="contact-form" action="login" method="POST">
+                    <form action="login" method="POST">
+                        @if(Session::has('success'))
+                        <div class="alert alert-success">{{Session::get('success')}}</div>
+                        @endif
+                        @if(Session::has('fail'))
+                        <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                        @endif
                     @csrf
 
                         <div class="contact-top">
@@ -50,9 +56,12 @@
                                                     <path fill="currentColor" d="M512 464c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V200.724a48 48 0 0 1 18.387-37.776c24.913-19.529 45.501-35.365 164.2-121.511C199.412 29.17 232.797-.347 256 .003c23.198-.354 56.596 29.172 73.413 41.433 118.687 86.137 139.303 101.995 164.2 121.512A48 48 0 0 1 512 200.724V464zm-65.666-196.605c-2.563-3.728-7.7-4.595-11.339-1.907-22.845 16.873-55.462 40.705-105.582 77.079-16.825 12.266-50.21 41.781-73.413 41.43-23.211.344-56.559-29.143-73.413-41.43-50.114-36.37-82.734-60.204-105.582-77.079-3.639-2.688-8.776-1.821-11.339 1.907l-9.072 13.196a7.998 7.998 0 0 0 1.839 10.967c22.887 16.899 55.454 40.69 105.303 76.868 20.274 14.781 56.524 47.813 92.264 47.573 35.724.242 71.961-32.771 92.263-47.573 49.85-36.179 82.418-59.97 105.303-76.868a7.998 7.998 0 0 0 1.839-10.967l-9.071-13.196z"></path>
                                                 </svg><!-- <i class="fas fa-envelope-open"></i> --></span>
                                         </div>
-                                        <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" value="{{old('email')}}">
                                     </div>
                                 </div>
+                                <span class="text-danger">@error('email') {{$message}}
+                                        
+                                    @enderror</span>
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -60,15 +69,18 @@
                                                     <path fill="currentColor" d="M400 256H152V152.9c0-39.6 31.7-72.5 71.3-72.9 40-.4 72.7 32.1 72.7 72v16c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24v-16C376 68 307.5-.3 223.5 0 139.5.3 72 69.5 72 153.5V256H48c-26.5 0-48 21.5-48 48v160c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zM264 408c0 22.1-17.9 40-40 40s-40-17.9-40-40v-48c0-22.1 17.9-40 40-40s40 17.9 40 40v48z"></path>
                                                 </svg><!-- <i class="fas fa-unlock-alt"></i> --></span>
                                         </div>
-                                        <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                                        <input type="password" class="form-control" name="password" placeholder="Password" value="{{old('password')}}">
                                     </div>
                                 </div>
+                                <span class="text-danger">@error('password') {{$message}}
+                                        
+                                    @enderror</span>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-bordered w-100 mt-3 mt-sm-4" type="submit">Sign In</button>
                             </div>
                             <div class="col-12">
-                                <span class="d-block pt-2 mt-4 border-top">Don't have an account? <a href="#">Sign Up</a></span>
+                                <span class="d-block pt-2 mt-4 border-top">Don't have an account? <a href="register">Sign Up</a></span>
                             </div>
                         </div>
                     </form>

@@ -17,18 +17,21 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('mainbody');
 });
+Route::get('/ed', function () {
+    return view('ed');
+});
+
+
 
 Route::view('/register','register');
-Route::view('/login','login');
-Route::get("/userList",[UserController::class,'userlist']);
+Route::view('/login','login')->middleware('alreadyLoggedIn');
+Route::get("/userList",[UserController::class,'userlist'])->middleware('isLoggedIn');
 Route::get("detail/{id}",[UserController::class,'detail']);
 Route::get("delete/{id}",[UserController::class,'delete']);
-Route::get('edit/{id}',[UserController::class,'show']);
+Route::get("edit/{id}",[UserController::class,'show']);
 Route::post('/edit',[UserController::class,'update']);
 
-Route::post("/register",[UserController::class,'register']);
+Route::post("/register",[UserController::class,'register'])->name('register');
 Route::post("/login",[UserController::class,'login']);
-Route::get('/logout', function () {
-    Session::forget('user');
-    return redirect('login');
-});
+Route::get("/logout",[UserController::class,'logout']);
+
