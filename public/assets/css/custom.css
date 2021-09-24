@@ -44,7 +44,7 @@ nav .others-option {
 }
 
 .navbar-sticky-moved-up .language_change .switch {
-  border: 1px solid #0d763c;
+  border: 1px solid #000000;
 }
 .language_change .switch {
   display: flex;
@@ -539,4 +539,20 @@ color: #5E6282;
     background: #FFF;
     box-shadow: 0px 100px 80px rgb(255, 255, 255), 0px 64.8148px 46.8519px rgb(255, 255, 255), 0px 38.5185px 25.4815px rgb(255, 255, 255), 0px 20px 13px rgb(255, 255, 255), 0px 8.14815px 6.51852px rgb(255, 255, 255), 0px 1.85185px 3.14815px rgb(255, 255, 255);
     border-radius: 18px;
+}
+.dropdown-menu li {
+	font-size: 18px;
+	margin: 10px 10px;
+	padding: 10px !important;
+	position: relative;
+	box-shadow: 0 1px 4px rgba(230, 214, 214, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.dropdown-menu li a{
+  color: #000;
+}
+.dropdown-menu li:hover{
+  background: #0d763c;
+}
+.dropdown-menu li a:hover{
+  color: #fff;
 }
