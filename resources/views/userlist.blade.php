@@ -51,7 +51,7 @@
             </div>
           </div>
 
-          <a class="btn btn-success" href="register">Add New User</a>
+          <a class="btn btn-success  w-10 mt-3 mt-sm-4" href="register">Add New User</a>
 
         </div>
       </div>

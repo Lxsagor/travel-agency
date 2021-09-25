@@ -15,13 +15,13 @@
     <title>travel Agency</title>
 
     <!-- Favicon  -->
-    <link rel="icon" href="assets/img/favicon.png" />
+    <link rel="icon" href="{{asset('assets/img/favicon.png')}}" />
 
     <!-- ***** All CSS Files ***** -->
 
     <!-- Style css -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}"/>
+    <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -59,20 +59,20 @@
     <!-- ***** All jQuery Plugins ***** -->
 
     <!-- jQuery(necessary for all JavaScript plugins) -->
-    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="{{asset('assets/js/jquery/jquery.min.js')}}"></script>
 
     <!-- Bootstrap js -->
-    <script src="assets/js/bootstrap/popper.min.js"></script>
-    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap/popper.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap/bootstrap.min.js')}}"></script>
 
     <!-- Plugins js -->
-    <script src="assets/js/plugins/plugins.min.js"></script>
+    <script src="{{asset('assets/js/plugins/plugins.min.js')}}"></script>
 
     <!-- Active js -->
-    <script src="assets/js/active.js"></script>
+    <script src="{{asset('assets/js/active.js')}}"></script>
 
     <!-- Language Related JS -->
-    <script src="assets/js/tinyi18n.js"></script>
+    <script src="{{asset('assets/js/tinyi18n.js')}}"></script>
     <script>
       tinyi18n.loadTranslations("translation.json");
     </script>
