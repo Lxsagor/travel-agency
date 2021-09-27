@@ -20,6 +20,7 @@
             <div class="rowsearched-item cart-list-divider">
                 <form action="/edit" method="POST">
                     @csrf
+                    @method('PUT')
                     <input type="hidden" name="id"  value="{{$data['id']}}">
                     <div class="form-group">
                         <label for="exampleInputUser">User Name</label>

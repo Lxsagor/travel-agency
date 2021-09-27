@@ -29,7 +29,7 @@ Route::get("/userList",[UserController::class,'userlist'])->middleware('isLogged
 Route::get("detail/{id}",[UserController::class,'detail']);
 Route::get("delete/{id}",[UserController::class,'delete']);
 Route::get("edit/{id}",[UserController::class,'show']);
-Route::post('/edit',[UserController::class,'update']);
+Route::put('/edit',[UserController::class,'update']);
 
 Route::post("/register",[UserController::class,'register'])->name('register');
 Route::post("/login",[UserController::class,'login']);
